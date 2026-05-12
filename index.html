@@ -8,264 +8,11 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
+<link rel="stylesheet" href="styles.css">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Poppins', sans-serif;
-    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
-    color:white;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:40px;
-}
-
-.container{
-    width:100%;
-    max-width:1300px;
-    display:grid;
-    grid-template-columns:320px 1fr;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,0.1);
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 10px 40px rgba(0,0,0,0.4);
-}
-
-/* ========================= */
-/* SIDEBAR */
-/* ========================= */
-
-.sidebar{
-    background:linear-gradient(180deg,#2563eb,#1d4ed8);
-    padding:40px 30px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-}
-
-.profile{
-    text-align:center;
-}
-
-.profile-img{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    margin:auto;
-    background:rgba(255,255,255,0.2);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:55px;
-    margin-bottom:20px;
-    border:4px solid rgba(255,255,255,0.2);
-}
-
-.nombre{
-    font-size:30px;
-    font-weight:700;
-}
-
-.titulo{
-    margin-top:10px;
-    font-size:15px;
-    opacity:0.9;
-    line-height:1.5;
-}
-
-.contact-info{
-    margin-top:40px;
-}
-
-.contact-info div{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom:20px;
-    font-size:14px;
-}
-
-.contact-info i{
-    background:white;
-    color:#2563eb;
-    width:35px;
-    height:35px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-/* ========================= */
-/* MAIN CONTENT */
-/* ========================= */
-
-.main-content{
-    padding:50px;
-}
-
-.section{
-    margin-bottom:45px;
-}
-
-.section-title{
-    font-size:22px;
-    margin-bottom:25px;
-    position:relative;
-    display:inline-block;
-}
-
-.section-title::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-8px;
-    width:60%;
-    height:4px;
-    border-radius:10px;
-    background:linear-gradient(90deg,#3b82f6,#60a5fa);
-}
-
-.card{
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.08);
-    padding:25px;
-    border-radius:18px;
-    margin-bottom:20px;
-    transition:0.3s ease;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    background:rgba(255,255,255,0.07);
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-}
-
-.card h3{
-    font-size:19px;
-    margin-bottom:8px;
-}
-
-.card .subtitulo{
-    color:#60a5fa;
-    font-size:14px;
-    margin-bottom:15px;
-}
-
-.card ul{
-    padding-left:20px;
-    line-height:1.8;
-}
-
-/* ========================= */
-/* SKILLS */
-/* ========================= */
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-.skill{
-    padding:12px 18px;
-    border-radius:50px;
-    background:rgba(59,130,246,0.15);
-    border:1px solid rgba(96,165,250,0.4);
-    transition:0.3s;
-    cursor:pointer;
-    font-weight:500;
-}
-
-.skill:hover{
-    background:#3b82f6;
-    transform:scale(1.08);
-    box-shadow:0 5px 15px rgba(59,130,246,0.5);
-}
-
-/* ========================= */
-/* BUTTONS */
-/* ========================= */
-
-.buttons{
-    margin-top:25px;
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    text-decoration:none;
-    color:white;
-    padding:14px 22px;
-    border-radius:14px;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.btn-primary{
-    background:linear-gradient(90deg,#2563eb,#3b82f6);
-}
-
-.btn-secondary{
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.1);
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 18px rgba(0,0,0,0.3);
-}
-
-/* ========================= */
-/* FOOTER */
-/* ========================= */
-
-.footer{
-    text-align:center;
-    margin-top:30px;
-    opacity:0.7;
-    font-size:14px;
-}
-
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-
-@media(max-width:950px){
-
-    .container{
-        grid-template-columns:1fr;
-    }
-
-    .sidebar{
-        text-align:center;
-    }
-
-    .contact-info div{
-        justify-content:center;
-    }
-
-    .main-content{
-        padding:35px;
-    }
-}
-
-</style>
 </head>
 
 <body>
@@ -274,11 +21,8 @@ body{
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
-
         <div>
-
             <div class="profile">
-
                 <div class="profile-img">
                     <i class="fa-solid fa-user"></i>
                 </div>
@@ -288,11 +32,9 @@ body{
                 <p class="titulo">
                     Estudiante de Matemáticas Aplicadas y Computación
                 </p>
-
             </div>
 
             <div class="contact-info">
-
                 <div>
                     <i class="fa-solid fa-envelope"></i>
                     <span>emii.programaton@gmail.com</span>
@@ -305,13 +47,10 @@ body{
 
                 <div>
                     <i class="fa-brands fa-github"></i>
-                    <span>github.com/emiliano</span>
+                    <span>github.com/Emiliano1502</span>
                 </div>
-
             </div>
-
         </div>
-
     </aside>
 
     <!-- MAIN -->
@@ -319,7 +58,6 @@ body{
 
         <!-- SOBRE MI -->
         <section class="section">
-
             <h2 class="section-title">Sobre Mí</h2>
 
             <div class="card">
@@ -331,26 +69,26 @@ body{
                 </p>
 
                 <div class="buttons">
-                    <a href="#" class="btn btn-primary">
+                    <a href="./CV_Emiliano_Ruiz_Garcia.pdf" class="btn btn-primary" download>
                         <i class="fa-solid fa-download"></i> Descargar CV
                     </a>
 
-                    <a href="#" class="btn btn-secondary">
+                    <a href="https://www.linkedin.com/in/emiliano-ruiz-40907a275" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-linkedin"></i> LinkedIn
                     </a>
+
+                    <a href="https://github.com/Emiliano1502" class="btn btn-github" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
                 </div>
-
             </div>
-
         </section>
 
         <!-- EXPERIENCIA -->
         <section class="section">
-
             <h2 class="section-title">Experiencia Profesional</h2>
 
             <div class="card">
-
                 <h3>Asesor de Profesor de Asignatura</h3>
 
                 <p class="subtitulo">
@@ -363,52 +101,40 @@ body{
                     <li>Creación de herramientas web para enseñanza.</li>
                     <li>Asistencia técnica y académica en proyectos digitales.</li>
                 </ul>
-
             </div>
-
         </section>
 
         <!-- EDUCACION -->
         <section class="section">
-
             <h2 class="section-title">Educación</h2>
 
             <div class="card">
-
                 <h3>Licenciatura en Matemáticas Aplicadas y Computación</h3>
 
                 <p class="subtitulo">
                     Universidad Nacional Autónoma de México (UNAM) | 2023 - Actualidad
                 </p>
-
             </div>
-
         </section>
 
         <!-- CERTIFICACIONES -->
         <section class="section">
-
             <h2 class="section-title">Cursos y Certificaciones</h2>
 
             <div class="card">
-
                 <ul>
                     <li>EF SET C1 Advanced Certificate (2026)</li>
                     <li>Explorations into Mindfulness – IBM (2026)</li>
                     <li>Programming for Everybody – University of Michigan (2026)</li>
                 </ul>
-
             </div>
-
         </section>
 
         <!-- SKILLS -->
         <section class="section">
-
             <h2 class="section-title">Skills</h2>
 
             <div class="skills">
-
                 <span class="skill">HTML</span>
                 <span class="skill">CSS</span>
                 <span class="skill">JavaScript</span>
@@ -418,18 +144,15 @@ body{
                 <span class="skill">Git</span>
                 <span class="skill">GitHub</span>
                 <span class="skill">Inglés C1</span>
-
             </div>
-
         </section>
 
         <!-- FOOTER -->
         <footer class="footer">
-            © 2026 - Emiliano Ruiz García
+            ©️ 2026 - Emiliano Ruiz García
         </footer>
 
     </main>
-
 </div>
 
 </body>
